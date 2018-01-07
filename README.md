@@ -25,13 +25,22 @@ mysql -h 127.0.0.1 -u root -p
 
 Ansible Roles:
 - geerlingguy.firewall
-- geerlingguy.ntp
-- geerlingguy.git
+
+- apolloclark.osquery
+- apolloclark.filebeat
+- apolloclark.metricbeat
+- apolloclark.heartbeat
+- apolloclark.packetbeat
+
 - geerlingguy.apache
-- geerlingguy.mysql
+- apolloclark.apache-modsecurity
+
+- apolloclark.mysql
+- apolloclark.mysql-mcafee-audit
+- apolloclark.mysql-deploy
+
 - geerlingguy.php-versions
 - geerlingguy.php
 - geerlingguy.apache-php-fpm
 - geerlingguy.php-mysql
 - geerlingguy.composer
-- apolloclark.mysql-deploy
