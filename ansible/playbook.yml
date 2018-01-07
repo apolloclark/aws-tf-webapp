@@ -1,0 +1,31 @@
+# http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#directory-layout
+---
+# playbook.yml
+
+- hosts: all
+  connection: ssh
+  gather_facts: yes
+  become: true
+  vars_files:
+    - "vars.yml"
+  roles:
+    - geerlingguy.firewall
+
+    - apolloclark.osquery
+    - apolloclark.filebeat
+    - apolloclark.metricbeat
+    - apolloclark.heartbeat
+    - apolloclark.packetbeat
+
+    - geerlingguy.apache
+    - apolloclark.apache-modsecurity
+
+    - apolloclark.mysql
+    - apolloclark.mysql-mcafee-audit
+    - apolloclark.mysql-deploy
+
+    - geerlingguy.php-versions
+    - geerlingguy.php
+    - geerlingguy.apache-php-fpm
+    - geerlingguy.php-mysql
+    - geerlingguy.composer
