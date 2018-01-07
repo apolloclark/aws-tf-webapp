@@ -4,6 +4,7 @@
 manifest.json
 vagrant.json
 Gemfile.lock
+composer.lock
 
 **/ansible/roles/*
 **/playbook.retry
