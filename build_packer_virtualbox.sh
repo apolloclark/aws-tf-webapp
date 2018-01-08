@@ -2,7 +2,6 @@
 start=`date +%s`
 
 packer build -only=virtualbox-ovf \
-	-var "iso_path=$HOME/Downloads/vm_source/" \
 	packer.json
 
 end=`date +%s`
