@@ -1,6 +1,9 @@
 #!/bin/bash -eux
 start=`date +%s`
 
+# remove old OVF file
+rm -rf ./output-*-virtualbox-iso
+
 packer build -only=virtualbox-ovf \
 	packer.json
 
