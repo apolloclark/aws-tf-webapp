@@ -181,23 +181,13 @@ Packages = {
   }
 }
 
-# Define Installed services
-InstalledServices = [
-  'filebeat',
-  'metricbeat',
-  'heartbeat',
-  'packetbeat',
-  'osqueryd',
+# Define enabled services
+EnabledServices = [
   'apache2'
 ]
 
-# Define Active services
-ActiveServices = [
-  'filebeat',
-  'metricbeat',
-  'heartbeat',
-  'packetbeat',
-  'osqueryd',
+# Define running services
+RunningServices = [
   'apache2',
   'mysql'
 ]

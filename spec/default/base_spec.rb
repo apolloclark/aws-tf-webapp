@@ -8,15 +8,15 @@ Packages.each do |name, details|
   end
 end
 
-# Verify services
-InstalledServices.each do |name|
+# Verify enabled services
+EnabledServices.each do |name|
   describe service(name) do
     it { should be_enabled }
   end
 end
 
-# Verify services
-ActiveServices.each do |name|
+# Verify running services
+RunningServices.each do |name|
   describe service(name) do
     it { should be_running }
   end
