@@ -7,8 +7,6 @@ firewall_allowed_tcp_ports:
   - "22"
   - "25"
   - "80"
-  - "3306"
-  - "5601"
 
 # geerlingguy/ansible-role-apache
 # https://github.com/geerlingguy/ansible-role-apache/blob/master/defaults/main.yml
