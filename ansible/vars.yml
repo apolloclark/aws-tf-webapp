@@ -23,7 +23,6 @@ apache_packages:
 apache_remove_default_vhost: true
 apache_vhosts:
   - servername: "127.0.0.1"
-    serveralias: "10.0.2.15"
     documentroot: "/var/www/html/public/"
     extra_parameters: |
       ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000/var/www/html/public/"
