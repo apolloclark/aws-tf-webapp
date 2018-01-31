@@ -11,12 +11,6 @@
   roles:
     - geerlingguy.firewall
 
-    - apolloclark.osquery
-    - apolloclark.filebeat
-    - apolloclark.metricbeat
-    - apolloclark.heartbeat
-    - apolloclark.packetbeat
-
     - geerlingguy.apache
     - apolloclark.apache-modsecurity
 
