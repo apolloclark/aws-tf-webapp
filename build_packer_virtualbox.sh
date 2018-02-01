@@ -4,8 +4,11 @@ start=`date +%s`
 # remove old OVF file
 rm -rf ./output-*-virtualbox-ovf
 
-packer build -only=virtualbox-ovf \
-	packer.json
+packer validate packer_virtualbox.json
+
+packer inspect packer_virtualbox.json
+
+packer build packer_virtualbox.json
 
 end=`date +%s`
 secs=$((end-start))
