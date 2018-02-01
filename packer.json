@@ -91,6 +91,13 @@
       "only": ["amazon-ebs"]
     },
     {
+      "type": "shell",
+      "inline": [
+        "mkdir -p /var/www/html/public",
+        "cp /var/www/html/index.html /var/www/html/public/index.html"
+      ]
+    },
+    {
       "type": "shell-local",
   	  "command": "export PACKER_BUILDER='virtualbox-ovf'; export VM_NAME='{{ user `vm_name` }}'; rake spec",
       "only": ["virtualbox-ovf"]
