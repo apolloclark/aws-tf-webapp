@@ -51,8 +51,8 @@
     {
       "type": "shell",
       "inline": [
-        "mkdir -p /var/www/html/public",
-        "cp /var/www/html/index.html /var/www/html/public/index.html"
+        "sudo mkdir -p /var/www/html/public",
+        "sudo cp /var/www/html/index.html /var/www/html/public/index.html"
       ]
     },
     {
