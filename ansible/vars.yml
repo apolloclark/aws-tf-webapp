@@ -24,8 +24,8 @@ apache_vhosts:
     documentroot: "/var/www/html/public/"
     extra_parameters: |
       ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000/var/www/html/public/"
-      ErrorLog /var/log/apache2/error_log.log
-      CustomLog /var/log/apache2/access_log.log common
+      ErrorLog /var/log/apache2/error.log
+      CustomLog /var/log/apache2/access.log common
       SetEnv APPLICATION_ENV production
       Header set Access-Control-Allow-Origin "*"
 apache_mods_enabled:
@@ -38,7 +38,7 @@ apache_mods_enabled:
   - security2.load
   
 # apolloclark/ansible-role-apache-modsecurity
-sec_audit_log: "/var/log/apache2/apache_audit_log.log"
+sec_audit_log: "/var/log/apache2/audit.log"
 
 
 
@@ -83,7 +83,7 @@ mysql_config_include_dir: "/etc/mysql/conf.d/"
 
 # apolloclark/mysql-mcafee-audit
 mcafee_plugin_version: "1.1.4-725"
-audit_json_log_file: "/var/log/mysql/mysql_audit.log"
+audit_json_log_file: "/var/log/mysql/audit.log"
 
 # apolloclark/mysql-deploy
 mysql_db_name: "testdb"
