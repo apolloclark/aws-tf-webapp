@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
 
     # Ubuntu 16.04 Xenial LTS 64-bit
-    config.vm.box = "apolloclark/ubuntu1604"
+    config.vm.box = "apolloclark/ubuntu16.04"
     # config.vm.box_version = "20170926"
 
     # VirtualBox Provider-specific configuration
@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
             override.cache.scope = :box
         end
     end
-      
+
     # Configure the box with Ansible, running within the Guest Machine
     # https://www.vagrantup.com/docs/provisioning/ansible.html
     # https://www.vagrantup.com/docs/provisioning/ansible_common.html
