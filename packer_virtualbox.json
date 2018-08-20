@@ -5,11 +5,11 @@
     "headless": "",
     "memory": "1024",
     "hostname": "vagrant",
-    "source_path": "../packer-aws-base/output-ubuntu1604-virtualbox-ovf/ubuntu1604.ovf",
+    "source_path": "../packer-aws-beats/output-ubuntu1604-virtualbox-ovf/ubuntu1604-beats.ovf",
     "ssh_password": "vagrant",
     "ssh_username": "vagrant",
     "vagrantfile_template": "",
-    "vm_name": "ubuntu1604",
+    "vm_name": "ubuntu1604-webapp",
     "version": "{{isotime \"20060102.030405\"}}"
   },
   "builders": [
