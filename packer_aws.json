@@ -6,7 +6,7 @@
     "ssh_keypair_name": "{{env `SSH_KEYPAIR_NAME`}}",
     "ssh_private_key_file": "{{env `SSH_PRIVATE_KEY_FILE`}}",
     "ami_name": "packer-aws-webapp-{{isotime \"2006-01-02_15-04-06\"}}",
-    "source_ami": "{{env `BASE_AMI_ID`}}",
+    "source_ami": "{{env `BEATS_AMI_ID`}}",
     "ssh_username": "ubuntu",
     "version": "{{isotime \"20060102.030405\"}}"
   },
