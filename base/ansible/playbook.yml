@@ -16,7 +16,6 @@
 
     - apolloclark.mysql
     - apolloclark.mysql-mcafee-audit
-    - apolloclark.mysql-deploy
 
     - geerlingguy.php-versions
     - geerlingguy.php
