@@ -10,7 +10,7 @@
     - "vars_ssm.yml"
     - "vars.yml"
   roles:
-    - apolloclark.mysql-deploy
+    - apolloclark.mysql_deploy
     - apolloclark.osquery
     - apolloclark.auditbeat
     - apolloclark.filebeat

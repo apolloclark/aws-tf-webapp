@@ -12,10 +12,10 @@
     - geerlingguy.firewall
 
     - geerlingguy.apache
-    - apolloclark.apache-modsecurity
+    - apolloclark.apache_modsecurity
 
     - apolloclark.mysql
-    - apolloclark.mysql-mcafee-audit
+    - apolloclark.mysql_mcafee_audit
 
     - geerlingguy.php-versions
     - geerlingguy.php
