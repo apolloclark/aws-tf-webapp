@@ -12,7 +12,8 @@
   roles:
     - apolloclark.mysql-deploy
     - apolloclark.osquery
+    - apolloclark.auditbeat
     - apolloclark.filebeat
-    - apolloclark.metricbeat
     - apolloclark.heartbeat
+    - apolloclark.metricbeat
     - apolloclark.packetbeat
