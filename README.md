@@ -19,7 +19,7 @@ To use this project, you must have installed:
 ## Deploy to AWS, with Packer
 ```shell
 git clone https://github.com/apolloclark/packer-aws-webapp
-cd packer-aws-webapp
+cd ./packer-aws-webapp/config
 # create a keypair named "packer" or change lines 26, 27 in build_packer_aws.sh
 ./build_packer.sh
 ```
@@ -27,7 +27,7 @@ cd packer-aws-webapp
 ## Deploy Locally, with Vagrant
 ```shell
 git clone https://github.com/apolloclark/packer-aws-webapp
-cd packer-aws-webapp
+cd ./packer-aws-webapp/config
 # change line 6 in build_packer_virtualbox.sh to a folder with an Ubuntu 16.04 ISO
 vagrant up
 vagrant ssh
