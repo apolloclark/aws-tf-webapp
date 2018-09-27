@@ -18,27 +18,6 @@ apache_packages:
   - apache2
   - apache2-utils
   - libapache2-mod-security2
-apache_remove_default_vhost: true
-apache_vhosts:
-  - servername: "127.0.0.1"
-    documentroot: "/var/www/html/public/"
-    extra_parameters: |
-      ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000/var/www/html/public/"
-      ErrorLog /var/log/apache2/error.log
-      CustomLog /var/log/apache2/access.log common
-      SetEnv APPLICATION_ENV production
-      Header set Access-Control-Allow-Origin "*"
-apache_mods_enabled:
-  - expires.load
-  - ssl.load
-  - rewrite.load
-  - proxy.load
-  - proxy_fcgi.load
-  - headers.load
-  - security2.load
-  
-# apolloclark/ansible-role-apache-modsecurity
-sec_audit_log: "/var/log/apache2/audit.log"
 
 
 
@@ -59,12 +38,6 @@ php_packages:
   - php5.6-xml
   - php5.6-zip
 php_enable_php_fpm: true
-php_fpm_listen: "127.0.0.1:9000"
-php_fpm_listen_allowed_clients: "127.0.0.1"
-php_fpm_pm_max_children: 50
-php_fpm_pm_start_servers: 5
-php_fpm_pm_min_spare_servers: 5
-php_fpm_pm_max_spare_servers: 5
 
 
 
@@ -77,16 +50,7 @@ mysql_packages:
 mysql_bind_address: "127.0.0.1"
 mysql_user_password_update: true
 mysql_root_password_update: true
-mysql_config_include_files:
-  - src: "root-my.cnf.j2"
-mysql_config_include_dir: "/etc/mysql/conf.d/"
 
 # apolloclark/mysql-mcafee-audit
 mcafee_plugin_version: "1.1.4-725"
 audit_json_log_file: "/var/log/mysql/audit.log"
-
-# apolloclark/mysql-deploy
-mysql_db_name: "testdb"
-mysql_db_file: "{{ playbook_dir }}/files/database.sql"
-mysql_login_user: "root"
-mysql_login_password: "root"
