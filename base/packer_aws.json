@@ -40,12 +40,9 @@
   ],
   "provisioners": [
     {
-      "type": "shell-local",
-  	  "command": "ansible-galaxy install --force -v --roles-path='./ansible/roles' --role-file='./ansible/requirements.yml'"
-    },
-    {
-      "type": "ansible",
-      "user": "ubuntu",
+      "type": "ansible-local",
+      "playbook_dir": "./ansible",
+      "galaxy_file": "./ansible/requirements.yml",
       "playbook_file": "./ansible/playbook.yml"
     },
     {
@@ -56,8 +53,15 @@
       ]
     },
     {
-      "type": "shell-local",
-  	  "command": "export PACKER_BUILDER='amazon-ebs'; export AMI_NAME='{{ user `ami_name` }}'; export SSH_PRIVATE_KEY_FILE='{{ user `ssh_private_key_file` }}'; rake spec"
+      "type": "file",
+      "source": "./serverspec",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "cd /tmp/serverspec; rake spec"
+      ]
     }
   ],
   "post-processors": [
