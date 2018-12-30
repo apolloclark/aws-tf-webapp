@@ -60,7 +60,8 @@
     {
       "type": "shell",
       "inline": [
-        "cd /tmp/serverspec; rake spec"
+        "whoami; rvm -v; ruby -v; gem list | grep serverspec;",
+        "cd /tmp/serverspec; sudo rake spec"
       ]
     }
   ],
