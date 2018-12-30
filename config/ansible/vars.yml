@@ -12,7 +12,7 @@ mysql_login_password: "root"
 
 # apolloclark/auditbeat
 auditbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     kafka:
       enabled: true
@@ -21,7 +21,7 @@ auditbeat:
 
 # apolloclark/filebeat
 filebeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     elasticsearch:
     kafka:
@@ -31,7 +31,7 @@ filebeat:
 
 # apolloclark/metricbeat
 metricbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     kafka:
       enabled: true
@@ -40,7 +40,7 @@ metricbeat:
        
 # apolloclark/heartbeat
 heartbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   monitors:
     http:
       schedule: "'@every 5s'"
@@ -53,7 +53,7 @@ heartbeat:
 
 # apolloclark/packetbeat
 packetbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   protocols:
     http:
       enabled: true
