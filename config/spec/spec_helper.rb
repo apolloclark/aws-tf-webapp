@@ -153,33 +153,3 @@ if packer_status != 'none'
     # p ami_name, aws_ip, options, host, ssh_private_key_file
   end
 end
-
-
-
-# Disable sudo
-# set :disable_sudo, true
-
-
-# Set environment variables
-# set :env, :LANG => 'C', :LC_MESSAGES => 'C'
-
-# Set PATH
-# set :path, '/sbin:/usr/local/sbin:$PATH'
-
-
-
-# Define packages
-Packages = {
-}
-
-# Define enabled services
-EnabledServices = [
-  'mysql',
-  'apache2'
-]
-
-# Define running services
-RunningServices = [
-  'apache2',
-  'mysql'
-]

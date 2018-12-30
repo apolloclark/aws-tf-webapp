@@ -1,5 +1,23 @@
 require 'spec_helper'
 
+# Define packages
+Packages = {
+}
+
+# Define enabled services
+EnabledServices = [
+  'mysql',
+  'apache2'
+]
+
+# Define running services
+RunningServices = [
+  'apache2',
+  'mysql'
+]
+
+
+
 # https://www.singlestoneconsulting.com/articles/writing-efficient-infrastructure-tests-with-serverspec
 # Verify packages
 Packages.each do |name, details|
