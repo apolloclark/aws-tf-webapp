@@ -50,7 +50,7 @@
       "inline": [
         "sudo mkdir -p /var/www/html/public",
         "sudo cp /var/www/html/index.html /var/www/html/public/index.html"
-      ]
+      ]ones
     },
     {
       "type": "file",
@@ -60,7 +60,6 @@
     {
       "type": "shell",
       "inline": [
-        "whoami; rvm -v; ruby -v; gem list | grep serverspec;",
         "cd /tmp/serverspec; sudo rake spec"
       ]
     }
