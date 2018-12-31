@@ -50,7 +50,7 @@
       "inline": [
         "sudo mkdir -p /var/www/html/public",
         "sudo cp /var/www/html/index.html /var/www/html/public/index.html"
-      ]ones
+      ]
     },
     {
       "type": "file",
@@ -59,8 +59,10 @@
     },
     {
       "type": "shell",
+      "execute_command": "echo '{{ user `ssh_password` }}' | sudo -E -S bash '{{.Path}}'",
       "inline": [
-        "cd /tmp/serverspec; sudo rake spec"
+        "source /home/root/.rvm/scripts/rvm;",
+        "cd /tmp/serverspec; rake spec"
       ]
     }
   ],
