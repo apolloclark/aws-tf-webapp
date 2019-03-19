@@ -6,9 +6,10 @@
   connection: local
   gather_facts: yes
   become: true
+  become_user: "root"
   vars_files:
-    - "vars_ssm.yml"
     - "vars.yml"
+    - "vars_ssm.yml"
   roles:
     - apolloclark.mysql_deploy
     - apolloclark.osquery
