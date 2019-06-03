@@ -3,7 +3,7 @@
 - src: geerlingguy.firewall
 - src: geerlingguy.apache             # https://github.com/geerlingguy/ansible-role-apache
 - src: apolloclark.apache_modsecurity # https://github.com/apolloclark/ansible-role-apache-modsecurity
-- src: geerlingguy.mysql              # https://github.com/geerlingguy/ansible-role-mysql
+- src: apolloclark.mysql              # https://github.com/apolloclark/ansible-role-mysql
 - src: apolloclark.mysql_mcafee_audit # https://github.com/apolloclark/ansible-role-mysql-mcafee-audit
 - src: geerlingguy.php-versions       # https://github.com/geerlingguy/ansible-role-php-versions
 - src: geerlingguy.php                # https://github.com/geerlingguy/ansible-role-php

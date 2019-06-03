@@ -14,7 +14,7 @@
     - geerlingguy.apache
     - apolloclark.apache_modsecurity
 
-    - geerlingguy.mysql
+    - apolloclark.mysql
     - apolloclark.mysql_mcafee_audit
 
     - geerlingguy.php-versions
