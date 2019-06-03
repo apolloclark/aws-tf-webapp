@@ -70,7 +70,7 @@ php_fpm_pm_max_spare_servers: 5
 
 # https://github.com/geerlingguy/ansible-role-mysql/blob/master/defaults/main.yml
 # https://github.com/geerlingguy/ansible-role-mysql/blob/master/templates/my.cnf.j2
-mysql_version: "5.7.26"
+mysql_version: "5.7.25"
 mysql_packages:
   - mysql-common
   - mysql-community-server
